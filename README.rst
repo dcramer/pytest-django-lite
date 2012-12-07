@@ -37,6 +37,20 @@ You have two options to configure your testsuite's Django settings.
     DJANGO_SETTINGS_MODULE=myapp.settings py.test
 
 
+Write Tests
+===========
+
+from django.test import TestCase
+from myapp.models import Foo
+
+class MyTest(TestCase):
+    def test_foo(self):
+        assert Foo.objects.count() == 2
+
+
+.. note:: This only supports classical Django tests (class-based inheritence)
+
+
 Credits
 =======
 

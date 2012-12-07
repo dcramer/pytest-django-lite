@@ -10,6 +10,7 @@ setup(
     description='The bare minimum to integrate py.test with Django.',
     author='David Cramer',
     author_email='dcramer@gmail.com',
+    url='https://github.com/dcramer/pytest-django-lite',
     package_dir={'': 'src'},
     packages=find_packages('src'),
     long_description=open('README.rst').read(),
