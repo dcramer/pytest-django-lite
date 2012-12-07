@@ -33,6 +33,7 @@ You have two options to configure your testsuite's Django settings.
 2. Pass DJANGO_SETTINGS_MODULE
 
 ::
+
     DJANGO_SETTINGS_MODULE=myapp.settings py.test
 
 
