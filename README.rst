@@ -1,4 +1,4 @@
-A minimal plugin to integration Django and py.test.
+A minimal plugin to integrate Django and py.test.
 
 Usage
 =====
