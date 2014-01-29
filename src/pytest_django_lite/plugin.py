@@ -20,11 +20,9 @@ def _django_runner(request):
 
     from django.test.simple import DjangoTestSuiteRunner
 
-    try:
-        import django
+    import django
+    if hasattr(django, 'setup'):
         django.setup()
-    except AttributeError:
-        pass
 
     runner = DjangoTestSuiteRunner(interactive=False)
     runner.setup_test_environment()
