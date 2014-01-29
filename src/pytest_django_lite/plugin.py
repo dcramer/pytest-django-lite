@@ -20,6 +20,10 @@ def _django_runner(request):
 
     from django.test.simple import DjangoTestSuiteRunner
 
+    import django
+    if hasattr(django, 'setup'):
+        django.setup()
+
     runner = DjangoTestSuiteRunner(interactive=False)
     runner.setup_test_environment()
     request.addfinalizer(runner.teardown_test_environment)
